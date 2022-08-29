@@ -10,22 +10,22 @@ Face à l'impossibilité de se mettre d'accord, une seule solution :
 
 ![C'est l'heure du du-du-du-duel](./duel.gif)
 
-## Les règles
+## Les règles du challenge
 - Respecter le contrat
 - Amusez-vous et que Le plus rapide, gagne ! ([Le script de benchmark fait foi](./benchmark/))
 
 ## Le contrat
 A partir d'une liste de personnes et d'une liste des relations entre ces personnes, votre programme doit déterminer le dégré de la relation entre deux personnes :
-- S'il existe une relation directe entre les deux personnes, il s'agit d'une relation au degré `1`.  
-- Si la relation existe via un intermédiaire c'est une relation au degré `2`.  
-- Avec deux intermédiaires, c'est une relation au degré `3`, etc. 
+- S'il existe une relation directe entre les deux personnes, il s'agit d'une relation de degré `1`.  
+- Si la relation existe via un intermédiaire c'est une relation de degré `2`.  
+- Avec deux intermédiaires, c'est une relation de degré `3`, etc. 
 - Une relation envers soi-même est considéré comme étant de degré `0`
-- Une relation inexistante est considéré de degré `-1`.
+- Une relation inexistante est considéré comme étant de degré `-1`.
 
 ### Entrée/Sorties
 Dans le même répertoire que le programme seront placés tour à tour, les fichiers des différents [datasets](/datasets/). 
 
-Le nom des personnes sera passés en deux arguments, chacun entourée de guillemet. Le degré de la relation resolue devra être retourné dans la sortie standard. 
+Le nom des personnes sera passés en deux arguments, chacun entouré de guillemet. Le degré de la relation resolue devra être retourné dans la sortie standard. 
 
 Un exemple d'appel et de la réponse :
 
