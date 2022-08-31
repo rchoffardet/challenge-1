@@ -14,7 +14,7 @@ public static class Helper
          return $"{Math.Round(duration.TotalSeconds, 3)} s";
     }
 
-        public static string Humanize(this float nb, string unit = "")
+    public static string Humanize(this float nb, string unit = "")
     {
         return Humanize((double) nb, unit);
     }
