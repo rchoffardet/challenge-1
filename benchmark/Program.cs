@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Drawing;
+using System.Threading;
 using BetterConsoles.Tables;
 using BetterConsoles.Tables.Configuration;
 using BetterConsoles.Tables.Models;
@@ -51,6 +52,7 @@ foreach(var dataset in datasets)
             while(!process.HasExited)
             {
                 memory = process.PeakWorkingSet64;
+                Thread.Sleep(1);
             }
 
             process.WaitForExit();
