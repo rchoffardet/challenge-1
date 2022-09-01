@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A l'origine, ce challenge est un moyen pour résoudre un différent entre deux parties.  
+A l'origine, ce challenge est un moyen de résoudre un différent entre deux parties.  
 La première pense que le C++ est imbatable en terme de performance brute.   
 La seconde pense qu'elle peut faire mieux que la première en C#.
 
@@ -12,7 +12,8 @@ Face à l'impossibilité de se mettre d'accord, une seule solution :
 
 ## Les règles du challenge
 - Respecter le contrat
-- Amusez-vous et que Le plus rapide, gagne ! ([Le script de benchmark fait foi](./benchmark/))
+- Amusez-vous 
+- Que Le plus rapide, gagne ! ([Le script de benchmark fait foi](./benchmark/))
 
 ## Le contrat
 A partir d'une liste de personnes et d'une liste des relations entre ces personnes, votre programme doit déterminer le dégré de la relation entre deux personnes :
@@ -25,7 +26,7 @@ A partir d'une liste de personnes et d'une liste des relations entre ces personn
 ### Entrée/Sorties
 Dans le même répertoire que le programme seront placés tour à tour, les fichiers des différents [datasets](/datasets/). 
 
-Le nom des personnes sera passés en deux arguments, chacun entouré de guillemet. Le degré de la relation resolue devra être retourné dans la sortie standard. 
+Le nom des personnes sera passé en deux arguments, chacun entouré de guillemet. Le degré de la relation resolue devra être retourné dans la sortie standard. 
 
 Un exemple d'appel et de la réponse :
 
@@ -51,7 +52,7 @@ Processeur: i7-8700K
 RAM: 4x8 Go DDR4 2800 C16
 Disque: SanDisk Ultra II 960GB
 ```
-Je ferais au mieux pour réduire au maximum l'activité sur la machine pour éviter de polluer le benchmark. 
+Je ferai au mieux pour réduire au maximum l'activité sur la machine pour éviter de polluer le benchmark. 
 
 ## Soumission au challenge
 
@@ -59,4 +60,4 @@ Les soumissions se font via les [issues du projet](https://github.com/rchoffarde
 
 ## Leaderboard
 
-Ici seront exposés les soumissions les plus performantes :)
+Ici seront exposées les soumissions les plus performantes :)
