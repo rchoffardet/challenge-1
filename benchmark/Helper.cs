@@ -1,5 +1,12 @@
 public static class Helper
 {
+    public static void Deconstruct<T>(this T[] arr, out T first, out T second, out T third)
+    {
+        first = arr[0];
+        second = arr[1];
+        third = arr[2];
+    }
+    
     public static string Humanize(this TimeSpan duration)
     {
         if(duration.TotalMicroseconds < 1000) 
