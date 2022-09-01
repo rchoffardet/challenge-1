@@ -6,15 +6,7 @@ public static class Helper
         second = arr[1];
         third = arr[2];
     }
-
-    public static void Deconstruct<T>(this T[] arr, out T first, out T second, out T third, out T fourth)
-    {
-        first = arr[0];
-        second = arr[1];
-        third = arr[2];
-        fourth = arr[3];
-    }
-
+    
     public static string Humanize(this TimeSpan duration)
     {
         if(duration.TotalMicroseconds < 1000) 
@@ -29,7 +21,7 @@ public static class Helper
          return $"{Math.Round(duration.TotalSeconds, 3)} s";
     }
 
-        public static string Humanize(this float nb, string unit = "")
+    public static string Humanize(this float nb, string unit = "")
     {
         return Humanize((double) nb, unit);
     }
