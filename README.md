@@ -56,7 +56,7 @@ Je ferai au mieux pour réduire au maximum l'activité sur la machine pour évit
 
 ## Soumission au challenge
 
-Les soumissions se font via les [issues du projet](https://github.com/rchoffardet/challenge-1/issues). Ils peuvent être sous la forme d'une adresse faire un repository ou d'une archive.
+Les soumissions se font via les [discussions du projet](https://github.com/rchoffardet/challenge-1/discussions). Ils peuvent être sous la forme d'une adresse faire un repository ou d'une archive.
 
 ## Leaderboard
 
