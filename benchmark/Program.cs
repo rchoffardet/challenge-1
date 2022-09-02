@@ -1,9 +1,6 @@
 ﻿using System.Diagnostics;
-using System.Drawing;
-using System.Threading;
 using BetterConsoles.Tables;
 using BetterConsoles.Tables.Configuration;
-using BetterConsoles.Tables.Models;
 
 var dir = Directory.GetCurrentDirectory();
 
@@ -46,7 +43,6 @@ foreach(var dataset in datasets)
             process.StartInfo.RedirectStandardOutput = true;
             var memory = 0L;
 
-            var sw = new Stopwatch();
             process.Start();
 
             while(!process.HasExited)
@@ -56,8 +52,6 @@ foreach(var dataset in datasets)
             }
 
             process.WaitForExit();
-
-            var duration = sw.Elapsed;
 
             var output = process.StandardOutput.ReadToEnd().Trim();
 
