@@ -9,16 +9,17 @@ public static class Helper
     
     public static string Humanize(this TimeSpan duration)
     {
-        if(duration.TotalMicroseconds < 1000) 
-            return $"{Math.Round(duration.TotalMicroseconds, 3)} μs";
+        // Every tick in TimeSpan represents 100 ns - https://docs.microsoft.com/en-us/dotnet/api/system.timespan.ticks
+        if(duration.Ticks < 10) 
+            return $"{Math.Round(duration.Ticks * 100.0, 3)} ns";
 
-        if(duration.TotalNanoseconds < 1000) 
-            return $"{Math.Round(duration.TotalNanoseconds, 3)} ns";
+        if(duration.Ticks < 10000) 
+            return $"{Math.Round(duration.Ticks / 10.0, 3)} μs";
 
         if(duration.TotalMilliseconds < 1000) 
             return $"{Math.Round(duration.TotalMilliseconds, 3)} ms";
 
-         return $"{Math.Round(duration.TotalSeconds, 3)} s";
+        return $"{Math.Round(duration.TotalSeconds, 3)} s";
     }
 
     public static string Humanize(this float nb, string unit = "")
