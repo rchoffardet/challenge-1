@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Linq;
 using BetterConsoles.Tables;
 using BetterConsoles.Tables.Configuration;
 
@@ -8,7 +9,7 @@ var toBench = Directory.GetFiles(Path.Combine(dir, "to-bench"));
 var datasets = Directory.GetDirectories(Path.Combine(dir, "datasets"));
 
 
-foreach(var dataset in datasets)
+foreach(var dataset in datasets.OrderBy(x => x))
 {
     var peopleNb =  File.ReadLines(Path.Combine(dataset, "people.txt"))
         .LongCount()
