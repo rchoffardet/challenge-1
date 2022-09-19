@@ -29,6 +29,10 @@ foreach(var dataset in datasets)
 
     foreach(var exe in toBench)
     {
+        if (exe.EndsWith(".git-keep")) {
+            continue;
+        }
+
         var runs = new List<Run>();
         var i = 1;
 
