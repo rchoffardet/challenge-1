@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using BetterConsoles.Tables;
 using BetterConsoles.Tables.Configuration;
@@ -47,13 +48,20 @@ foreach(var dataset in datasets.OrderBy(x => x))
             process.StartInfo.Arguments = $"\"{first}\" \"{second}\"";
             process.StartInfo.RedirectStandardOutput = true;
             var memory = 0L;
+            var cpuTime = default(TimeSpan);
 
+            var startTime = DateTime.Now;
             process.Start();
 
-            while(!process.HasExited)
-            {
-                memory = process.PeakWorkingSet64;
-                Thread.Sleep(1);
+            try {
+                startTime = process.StartTime;
+                while(!process.HasExited)
+                {
+                    cpuTime = process.TotalProcessorTime;
+                    memory = Math.Max(process.WorkingSet64, memory);
+                    Thread.Sleep(1);
+                }
+            } catch (Exception ex) {
             }
 
             process.WaitForExit();
@@ -63,8 +71,8 @@ foreach(var dataset in datasets.OrderBy(x => x))
             var isExpected = output == expected;
             runs.Add(
                 new Run(
-                    process.ExitTime - process.StartTime, 
-                    process.TotalProcessorTime,
+                    process.ExitTime - startTime,
+                    cpuTime,
                     memory, 
                     isExpected
                 ));
