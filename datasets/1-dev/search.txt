@@ -1,0 +1,3 @@
+vector:captain spic:3
+amumu:captain spic:-1
+amumu:amumu:0
